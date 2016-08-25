@@ -1,10 +1,20 @@
-int x = 425;
+int x = 466;
 void setup()
 {
   size(500,500);
   background(135,206,250);
+  bottombunb();
+  bottombunt();
+  ham();
+  cheese();
+  lettuce();
+  tomato();
+  topbun();
+  bunthings();
 }
 void draw()
+{
+  if(x==26)
 {
   bottombunb();
   bottombunt();
@@ -14,6 +24,8 @@ void draw()
   tomato();
   topbun();
   bunthings();
+  x = x+440;
+}
   eating();
   noLoop();
 }
@@ -21,33 +33,33 @@ void bunthings()
 {
   fill(245,222,179);
   beginShape();
-    curveVertex(250,210);
-    curveVertex(250,210);
+    curveVertex(240,205);
+    curveVertex(240,205);
 
-    curveVertex(270,250);
+    curveVertex(270,240);
     
-    curveVertex(250,290);
-    curveVertex(250,290);
+    curveVertex(260,280);
+    curveVertex(260,280);
   endShape(CLOSE);   
 
   beginShape();
-    curveVertex(325,210);
-    curveVertex(325,210);
+    curveVertex(315,205);
+    curveVertex(315,205);
 
-    curveVertex(345,250);
+    curveVertex(345,240);
     
-    curveVertex(325,290);
-    curveVertex(325,290);
+    curveVertex(335,280);
+    curveVertex(335,280);
   endShape(CLOSE); 
 
   beginShape();
-    curveVertex(175,210);
-    curveVertex(175,210);
+    curveVertex(165,205);
+    curveVertex(165,205);
 
-    curveVertex(195,250);
+    curveVertex(195,240);
     
-    curveVertex(175,290);
-    curveVertex(175,290);
+    curveVertex(185,280);
+    curveVertex(185,280);
   endShape(CLOSE);                                                                                                                                                                                                                                                                                                                                                                     
 }
 void topbun()
@@ -58,9 +70,9 @@ void topbun()
 void tomato()
 {
  fill(255,50,50);
- ellipse(150,275,100,100);
- ellipse(250,285,100,100);
- ellipse(350,275,100,100); 
+ ellipse(150,265,100,100);
+ ellipse(250,275,100,100);
+ ellipse(350,265,100,100); 
 }
 void lettuce()
 {
@@ -80,21 +92,21 @@ void lettuce()
 void cheese()
 {
   fill(255,215,0);
-  rect(120,300,260,30);
+  rect(120,300,260,40);
 }
 void ham()
 {
   fill(240,128,128);
   beginShape();
-    curveVertex(110,310);
-    curveVertex(110,310);
+    curveVertex(120,310);
+    curveVertex(120,310);
 
     curveVertex(95,335);
     curveVertex(250,355);
     curveVertex(405,335);
 
-    curveVertex(390,310);
-    curveVertex(390,310);
+    curveVertex(380,310);
+    curveVertex(380,310);
   endShape();
 }
 void bottombunt()
@@ -122,11 +134,14 @@ void eating()
 {
 	fill(135,206,250);
 	noStroke();
-	ellipse(x,250,100,100);
-	ellipse(x,350,100,100);
+  ellipse(x,200,80,80);
+	ellipse(x,250,80,80);
+	ellipse(x,350,80,80);
+  ellipse(x,300,80,80);
+  ellipse(x,370,80,80);
 }
 void mousePressed()
 {
-	 x=x-30;
+	x=x-55;
 	redraw();
 }
